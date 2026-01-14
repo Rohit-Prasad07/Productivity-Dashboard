@@ -1,0 +1,87 @@
+/* Root colors */
+:root{
+     --pri:#F8F4E1;
+    --sec:#381c0a;
+    --tri1:#FEBA17;
+     --tri2:#74512D;
+}
+/* fontface */
+@font-face{
+    font-family:'MonkeyType';
+    src:url('./fonts/MonkeyType-Regular.ttf') format('truetype');
+}
+
+*{
+    margin:0;
+    padding:0;
+   box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height:100%;
+    width:100%;
+    background-color:var(--sec);
+}
+
+
+section.allElems{
+    height:100%;
+    width:100%;
+    padding:40px;
+    padding-top:80px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    gap: 40px;
+
+}
+
+.elem{
+    background-color:#FEBA17;
+  color:white;
+    height:255px;
+    width:220px;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    transition: all ease 0.2s   ;
+}
+
+.elem img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+}
+
+
+.elem h2{
+    position:absolute;
+   bottom:4%;
+   right:5%;
+   font-weight:500;
+    font-size:24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.elem:active{
+    scale:0.98;
+}
+
+
+/* Particular Page WOrks */
+
+.fullElem{
+    height:100%;
+    width:100%;
+    background-color:var(--sec);
+    padding:40px;
+    font-size:50px;
+    color:var(--pri);
+    font-family: 'MonkeyType', sans-serif;
+    display:none;
+}
