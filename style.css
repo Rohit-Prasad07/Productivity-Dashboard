@@ -38,7 +38,7 @@ section.allElems{
     flex-wrap:wrap;
     align-items:flex-start;
     gap: 40px;
-
+   position:absolute;
 }
 
 .elem{
@@ -49,7 +49,9 @@ section.allElems{
     border-radius:20px;
     overflow:hidden;
     position:relative;
-    transition: all ease 0.2s   ;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .elem img{
@@ -84,4 +86,23 @@ section.allElems{
     color:var(--pri);
     font-family: 'MonkeyType', sans-serif;
     display:none;
+    position:absolute;
+}
+
+/* back button */
+.back{
+    position: absolute;
+    right: 5%;
+    background-color: red;
+    border-radius: 10%;
+    padding: 15px 22px;
+    border:none;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.back:active{
+    scale:0.98;
 }
