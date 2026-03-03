@@ -24,3 +24,13 @@ openFeatures();
 
 
 
+// Todo Task Code 
+//problem in reload
+let form = document.querySelector('.addTask form');
+let taskInput =  document.querySelector('.addTask form input')
+let taskDetailsInput =      document.querySelector('.allTask form textarea ')
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  console.log(taskInput.value);
+  console.log(taskDetailsInput.value)
+});
