@@ -26,11 +26,51 @@ openFeatures();
 
 // Todo Task Code 
 //problem in reload
-let form = document.querySelector('.addTask form');
-let taskInput =  document.querySelector('.addTask form input')
-let taskDetailsInput =      document.querySelector('.allTask form textarea ')
-form.addEventListener('submit', function(e){
+
+let form = document.querySelector('.addTask form')
+let taskInput = document.querySelector('.addTask form #task-input')
+let taskDetailsInput = document.querySelector('.addTask form textarea')
+let taskCheckbox = document.querySelector('.addTask form #check')
+
+
+//  adding the value to the next div
+
+// Learning Local Storage
+localStorage.clear()
+var currentTask = []
+if(localStorage.getItem('cuurentTask')){
+ currentTask = JSON.parse(localStorage.getItem('currentTask'))
+}else{
+  console.log('Task List is Empty')
+}
+
+
+
+
+function renderTask(){
+   var allTask = document.querySelector('.allTask')
+var sum = ''
+currentTask.forEach(function(elem){
+   sum += `  <div class="task">
+            <h5>${elem.task} <span class=${elem.imp}>imp</span> </h5>
+            <button>Mark as Completed</button>
+          </div>
+       `
+})
+
+allTask.innerHTML = sum;
+}
+renderTask();
+
+form.addEventListener('submit',function(e){
   e.preventDefault();
-  console.log(taskInput.value);
-  console.log(taskDetailsInput.value)
-});
+  currentTask.push({task:taskInput.value,details:taskDetailsInput.value,imp:taskCheckbox.checked})
+  localStorage.setItem('cuurentTask',JSON.stringify(currentTask))
+  taskInput.value =''
+  taskDetailsInput.value = ''
+ taskCheckbox.checked = false
+ renderTask();
+})
+
+
+
