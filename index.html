@@ -4,98 +4,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOM-Project</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+  <title>DashBoard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div id="main">
-
+    <nav></nav>
     <section class="allElems">
-      <!-- TodoList -->
       <div class="todo elem" id="0">
-        <img src="https://i.pinimg.com/1200x/34/17/76/34177627f8766be3997ee4d63ab41e64.jpg" alt="">
-
-        <h2>ToDo List</h2>
+        <img src="https://i.pinimg.com/736x/cf/85/2f/cf852f48476cc90984e710c2d966278d.jpg" alt="">
+        <h2> To Do List</h2>
       </div>
-
-      <!-- Daily Planner -->
       <div class="daily elem" id="1">
-        <img src="https://i.pinimg.com/1200x/7e/f3/30/7ef330aca2fa9593cf1e0882d4f797a9.jpg" alt="">
-
+        <img src="https://i.pinimg.com/736x/5b/c1/a2/5bc1a258504ef5b7cae37783ea11872b.jpg" alt="">
         <h2>Daily Planner</h2>
       </div>
-
-      <!--  Motivation -->
       <div class="moti elem" id="2">
-        <img src="https://i.pinimg.com/736x/54/29/db/5429dbda352161dc28613f5061135dce.jpg" alt="">
-        <h2> Motivation</h2>
+        <img src="https://i.pinimg.com/736x/71/61/5f/71615fdb8b46ef152cd5b25d180cda3b.jpg" alt="">
+        <h2>Motivation</h2>
       </div>
-
-      <!-- Pmodoro Timer -->
       <div class="pomo elem" id="3">
-        <img src="https://i.pinimg.com/1200x/df/83/f9/df83f9170d9c4cd435d2d1c826ee1ad3.jpg" alt="">
-        <h2> Pomodoro Timer</h2>
-      </div>
+        <img src="https://i.pinimg.com/1200x/13/01/5f/13015f6ab7df44b96358a0c0ecc1df6a.jpg" alt="">
 
-      <!-- Daily Goals -->
+      </div>
       <div class="goals elem" id="4">
-        <img src="https://i.pinimg.com/736x/2f/34/9b/2f349b789a9edbece8acc2611bdaa85d.jpg" alt="">
-        <h2> Daily Goals</h2>
-      </div>
-
-    </section>
-
-
-    <!-- The Windows for the Pages -->
-    <section class="fullElem todo-list-fullpage">
-      <button class="back" id="0">Close</button>
-      <h2>Your Personalized Task List</h2>
-
-      <div class="todo-container">
-        <div class="addTask">
-          <form>
-            <input id="task-input" type="text" placeholder="Enter The Task" name="" id="">
-            <textarea  name="" id="area" placeholder="Enter The Details"></textarea>
-            <div class="mark-imp">
-              <input  type="checkbox" id="check">
-              <label for="check">Marks as Important!</label>
-            </div>
-            <button>Add Task</button>
-          </form>
-
-        </div>
-        <div class="allTask">
-        
-        </div>
+        <img src="https://i.pinimg.com/736x/4d/2b/59/4d2b59a59c84834e16df2727852347ee.jpg" alt="">
+        <h2>Daily Goals</h2>
       </div>
     </section>
 
-    <section class="fullElem daily-planner-fullpage">
-      <button class="back" id="1">Close</button>
+    <!-- Different Pages -->
+    <section class="fullElem">
+
+      <h1> Todo Page</h1>
+    </section>
+    <section class="fullElem">
+
       <h1>Daily Planner</h1>
     </section>
-
-    <section class="fullElem motivation-fullpage">
-      <button class="back" id="2">Close</button>
-      <h1>Motivation Quotes</h1>
+    <section class="fullElem">
+      <h1>Motivation Quote</h1>
     </section>
-
-    <section class="fullElem pomodoro-fullpage">
-      <button class="back" id="3">Close</button>
-      <h1>Pomodoro Timer</h1>
+    <section class="fullElem">
+      <h1>Pomdoro Timer</h1>
     </section>
-
-    <section class="fullElem daily-goals-fullpage">
-      <button class="back" id="4">Close</button>
+    <section class="fullElem">
       <h1>Daily Goals</h1>
     </section>
 
 
   </div>
 
-  <script src="script.js" defer></script>
+
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>
